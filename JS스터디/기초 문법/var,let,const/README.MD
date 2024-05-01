@@ -22,6 +22,7 @@ console.log(hello); //hello3
 
 - 중복 선언 불가
 - 재할당 가능
+- 값이 주어져야함
 
 ```jsx
 let hi="hi"; 
