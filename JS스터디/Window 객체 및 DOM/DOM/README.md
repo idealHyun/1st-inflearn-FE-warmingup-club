@@ -57,7 +57,7 @@ console.log(element.innerText);
 console.log(element.textContent); 
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/5e953a61-5c75-4dbd-812f-fa31572de29b/fbb4a3d6-22f4-4e1c-9e55-e72b9b6999f4/Untitled.png)
+![Untitled](https://res.cloudinary.com/practicaldev/image/fetch/s--RXa-PYen--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9ki8iq5jvmprhdo3h2gt.png)
 
 - innerHTML : html 까지 같이 그대로 모두 보여준다
 - innerText : 사용자에게 보여지는 텍스트값만 보여주고, 여러공백은 무시하고 하나의 공백만 처리한다
