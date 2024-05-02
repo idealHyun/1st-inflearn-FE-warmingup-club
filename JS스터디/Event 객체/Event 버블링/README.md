@@ -43,4 +43,4 @@ form.addEventListener('click',function(e){
 
 
 - `e.target`은 이벤트가 이루어진 객체
-- `e.cuttenrtTarget / this` 은 이벤트가 할당된 객체
+- `e.currentTarget / this` 은 이벤트가 할당된 객체
