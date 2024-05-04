@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intersection observer</title>
+    <style>
+        .item {
+            text-align: center;
+            padding: 20px 0px;
+            margin: 0px;
+        }
+
+        .item:nth-child(even) {
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list"></div>
+    <p class="end"></p>
+
+    <script>
+        const count = 20;
+        let itemIndex = 0;
+
+        const observer = new IntersectionObserver(entries => {
+            console.log(entries); //관찰하는 데이터의 배열(observe 하는 것)
+
+            entries.forEach(entry => {//관찰하는 데이터의 배열을 하나씩 꺼내서 실행
+                if (entry.isIntersecting) {
+
+                    for (let i = 0; i < count; i++) {
+                        let item = document.createElement('div');
+
+                        item.classList.add('item');
+                        item.textContent = ++itemIndex;
+                        document.querySelector('.list').appendChild(item);
+                    }
+                }
+            });
+
+        });
+        observer.observe(document.querySelector('.end'));
+    </script>
+</body>
+
+</html>
