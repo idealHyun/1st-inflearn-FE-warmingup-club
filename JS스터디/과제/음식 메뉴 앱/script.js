@@ -91,48 +91,22 @@ const lunchBtn = document.querySelector(".lunch");
 const shakeBtn = document.querySelector(".shake");
 const dinnerBtn = document.querySelector(".dinner");
 
-// 버튼에 맞게 음식 보이기
+// 버튼에 이벤트 리스너 추가
+allBtn.addEventListener("click", () => clickBtn("all"));
+breakfastBtn.addEventListener("click", () => clickBtn("breakfast"));
+lunchBtn.addEventListener("click", () => clickBtn("lunch"));
+shakeBtn.addEventListener("click", () => clickBtn("shake"));
+dinnerBtn.addEventListener("click", () => clickBtn("dinner"));
 
-// 모든 음식 요소의 classList 에 있는 food를 가져와서 display를 block으로 변경
-allBtn.addEventListener("click", () => {
-	document.querySelectorAll(".food").forEach((food) => {
-        food.style.display = "block";
-	});
-});
-
-// 
-breakfastBtn.addEventListener("click", () => {
-	document.querySelectorAll(".food").forEach(food => {
-        food.style.display = "none";
-	});
-	document.querySelectorAll(".breakfast").forEach(breakfast => { 
-        breakfast.style.display = "block"; // 
+// 버튼 클릭 시 해당 음식 보여주기
+function clickBtn(type) {
+    const foods = document.querySelectorAll(".food");
+    
+    foods.forEach(food => {
+        if (type === "all" || food.classList.contains(type)) {
+            food.style.display = "block";
+        } else {
+            food.style.display = "none";
+        }
     });
-});
-
-lunchBtn.addEventListener("click", () => {
-	document.querySelectorAll(".food").forEach(food => {
-        food.style.display = "none";
-	});
-	document.querySelectorAll(".lunch").forEach(breakfast => { 
-        breakfast.style.display = "block"; // 
-    });
-});
-
-shakeBtn.addEventListener("click", () => {
-	document.querySelectorAll(".food").forEach(food => {
-        food.style.display = "none";
-	});
-	document.querySelectorAll(".shake").forEach(breakfast => { 
-        breakfast.style.display = "block"; // 
-    });
-});
-
-dinnerBtn.addEventListener("click", () => {
-    document.querySelectorAll(".food").forEach(food => {
-        food.style.display = "none";
-	});
-	document.querySelectorAll(".dinner").forEach(breakfast => { 
-        breakfast.style.display = "block"; // 
-    });
-});
+}
