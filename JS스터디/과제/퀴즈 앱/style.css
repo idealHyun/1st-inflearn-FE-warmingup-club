@@ -1,0 +1,47 @@
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: skyblue;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 20px;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 20px;
+}
+
+.quiz-content {
+    width: 30px;
+}
+
+.next-btn, .restart-btn {
+    width: 100px;
+}
+
+.quiz-title {
+    font-size: 24px;
+    font-weight: bold;
+}
