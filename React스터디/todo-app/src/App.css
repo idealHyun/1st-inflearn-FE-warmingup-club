@@ -1,0 +1,16 @@
+body{
+    background-color: aliceblue;
+  }
+  
+  .container{
+    margin: auto;
+    max-width: 600px;
+  }
+  
+  .todoBlock{
+    padding: 30px;
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: -9px 9px 16px 0px rgba(0,0,0,0.2);
+  }
